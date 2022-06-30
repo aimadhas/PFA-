@@ -1,0 +1,94 @@
+{%extends "base.html"%}
+{% block title %}night{% endblock %}
+
+
+
+{%block body%}
+    <header>
+        <div class="Alllogo">
+            <img src="{{url_for('static',filename='image/logo_test_1.png')}}" alt="">
+            <h1 class="logo2">Pharma network</h1>
+        </div>
+        <ul class="nav-link" id="one">
+            <li id="tow"><a href="http://127.0.0.1:5000/">Home</a></li>
+            <li id="ol"><a href="http://127.0.0.1:5000/#service">Our Service</a></li>
+            <li id="lo"><a href="http://127.0.0.1:5000/contact">Contact</a></li>
+        </ul>
+        <div class="burger" id="two">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </header>
+    <!-- siction one -->
+    <section class="one">
+        <h1>find open pharmacies  whenever  you want with one click</h1>
+        <img src="{{url_for('static',filename='image/mainn_img.png')}}" alt="">
+        <div class="un">
+            <div class="chose">
+                <a href="http://127.0.0.1:5000/pharmacie">Day</a>
+                <a href="#night">Night</a>
+            </div>
+            <p>Pharmacie de quartier</p>
+        </div>
+    </section>
+    <section class="client" id="night">
+        <div class="pharma">
+            <img src="{{url_for('static',filename='image/card.jpeg')}}" alt="">
+            <h1>Pharmacie Assafar</h1>
+            <h2>alhouda, Bloc G N Lot 70, Boulevard Abdelmoumen, Casablanca</h2>
+            <p>Téléphone : <span>05283-20239</span></p>
+            <p>ville :<span>agadir</span></p>
+            <h4>Ouvert toute la journée (24 heures)</h4>
+            <a href="../page two/nightpage1.html">More info</a>
+        </div>
+        <div class="pharma">
+            <img src="{{url_for('static',filename='image/card.jpeg')}}" alt="">
+            <h1>Pharmacie Nour Al Houda</h1>
+            <h2>Pharmacie Nour Al Houda 211, Agadir 80000</h2>
+            <p>Téléphone : <span>05283-21425</span></p>
+            <p>ville :<span>agadir</span></p>
+            <h4>Ouvert toute la journée (24 heures)</h4>
+            <a href="../page two/nightpage2.html">More info</a>
+        </div>
+        <div class="pharma">
+            <img src="{{url_for('static',filename='image/card.jpeg')}}" alt="">
+            <h1>Pharmacie Elkachla</h1>
+            <h2>173 Bloc D, Agadir 80000</h2>
+            <p>Téléphone : <span>05282-80662</span></p>
+            <p>ville :<span>agadir</span></p>
+            <h4>Ouvert toute la journée (24 heures)</h4>
+            <a href="../page two/nightpage3.html">More info</a>
+        </div>
+        <div class="pharma">
+            <img src="{{url_for('static',filename='image/card.jpeg')}}" alt="">
+            <h1>Pharmacie Attawhid</h1>
+            <h2>9FV6+VRP, Rue 110, Agadir 80000</h2>
+            <p>Téléphone : <span>05283-20002</span></p>
+            <p>ville :<span>agadir</span></p>
+            <h4>Ouvert toute la journée (24 heures)</h4>
+            <a href="../page two/nightpage4.html">More info</a>
+        </div>
+    </section>
+    <footer>
+        <h1>pharmanetwork</h1>
+        <div class="tous">
+            <ul>
+                <li><a href="http://127.0.0.1:5000/contact">home</a></li>
+                <li><a href="">about us</a></li>
+                <li><a href="http://127.0.0.1:5000/#service">our services</a></li>
+                <li><a href="http://127.0.0.1:5000/contact">contact</a></li>
+            </ul>
+            <ul>
+                <li> <a href="http://127.0.0.1:5000//info"> Resouces</a></li>
+                <li> <a href="">Terms Of Service</a></li>
+                <li> <a href="">Privacy Policy</a> </li>
+            </ul>
+        </div>
+        <p>© 2022 pharmanetwork</p>
+    </footer>
+    
+    <script src="{{url_for('static',filename='js/contact.js')}}"></script>
+
+
+    {%endblock%}

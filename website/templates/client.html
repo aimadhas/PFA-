@@ -1,0 +1,95 @@
+{%extends "base.html"%}
+
+{% block title %}pharmacie{% endblock %}
+
+
+
+{%block body%}
+
+<header>
+    <div class="Alllogo">
+        <img src="{{url_for('static',filename='image/logo_test_1.png')}}" alt="" href="http://127.0.0.1:5000/">
+        <h1 class="logo2">Pharma network</h1>
+    </div>
+    <ul class="nav-link" id="one">
+        <li id="tow"><a href="http://127.0.0.1:5000/">Home</a></li>
+        <li id="ol"><a href="http://127.0.0.1:5000/#service">Our Service</a></li>
+    <li id="lo"><a href="http://127.0.0.1:5000/contact">Contact</a></li>
+    </ul>
+    <div class="burger" id="two">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</header>
+<!-- siction one -->
+<section class="one">
+    <h1>find open pharmacies  whenever  you want with one click</h1>
+    <img src="{{url_for('static',filename='image/mainn_img.png')}}" alt="">
+    <div class="un">
+        <div class="chose">
+            <a href="#day">Day</a>
+            <a href="http://127.0.0.1:5000/nigtpharmacie">Night</a>
+        </div>
+        <p>Pharmacie de quartier</p>
+    </div>
+</section>
+<script src="{{url_for('static',filename='js/clientjs.js')}}"></script>
+
+
+<section class="client" id="day"> 
+    
+    {% for row in rows %}  
+    
+    <div class="pharma">
+        <img src="{{url_for('static',filename='image/card.jpeg')}}" alt="">
+        
+        <h1>{{row["name"]}}</h1>
+        <h2>{{row["address"]}}</h2>
+        <p>Téléphone : <span>{{row["tel"]}}</span></p>
+        <p>ville :<span>agadir</span></p>
+        <h4>Ouvert toute la journée {{row["date"]}}</h4>
+        <a href="">More info</a>
+    </div><div class="pharma">
+        <img src="./card.jpeg" alt="">
+      
+    <h1>{{row["name"]}}</h1>
+    <h2>{{row["address"]}}</h2>
+    <p>Téléphone : <span>{{row["tel"]}}</span></p>
+    <p>ville :<span>agadir</span></p>
+    <h4>Ouvert toute la journée {{row["date"]}}</h4>
+    <a href="https://www.google.fr/maps/place/Pharmacie+Reda/@30.4450329,-9.556046,15z/data=!4m5!3m4!1s0x0:0x3dad733840e929d!8m2!3d30.445033!4d-9.556046">More info</a>
+</div>
+
+
+{% endfor %}  
+
+
+</section>
+
+<footer>
+    <h1>pharmanetwork</h1>
+    <div class="tous">
+        <ul>
+            <li><a href="http://127.0.0.1:5000/contact">home</a></li>
+            <li><a href="">about us</a></li>
+            <li><a href="http://127.0.0.1:5000/#service">our services</a></li>
+            <li><a href="http://127.0.0.1:5000/contact">contact</a></li>
+        </ul>
+        <ul>
+            <li> <a href="http://127.0.0.1:5000//info"> Resouces</a></li>
+            <li> <a href="">Terms Of Service</a></li>
+            <li> <a href="">Privacy Policy</a> </li>
+        </ul>
+    </div>
+    <p>© 2022 pharmanetwork</p>
+</footer>
+
+       
+
+
+{% endblock %}
+
+
+
+

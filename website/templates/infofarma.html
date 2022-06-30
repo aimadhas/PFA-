@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./stylepage.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="Alllogo">
+            <img src="../logo_test_1.png" alt="">
+            <h1 class="logo2">Pharma network</h1>
+        </div>
+        <ul class="nav-link" id="one">
+            <li id="tow"><a href="http://127.0.0.1:5000/">Home</a></li>
+            <li id="ol"><a href="http://127.0.0.1:5000/#service">Our Service</a></li>
+            <li id="lo"><a href="http://127.0.0.1:5000/contact">Contact</a></li>
+        </ul>
+        <div class="burger" id="two">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+       </header>
+       <section class="one">
+        <div class="info">
+            <h1>Adresse / Téléphone :{{row["name"]}} </h1>
+            <h4>Adresse<a>{{row["address"]}}</a></h4>
+            <p class="un">Téléphone<span class="numero">{{row["tel"]}}</span></p>
+            <p class="deux">Pays<span>Maroc</span></p>
+            <p class="trois">ville<span>agadir</span></p>
+            <a href="https://www.google.fr/maps/place/Pharmacie+H%C3%B4pital+Hassan+Ii/@30.4358069,-9.5889771,17z/data=!3m1!4b1!4m5!3m4!1s0xdb3b68d27d5f00b:0x7d40fd643f1cad8b!8m2!3d30.4358035!4d-9.5867858">localitation</a>
+        </div>
+        <div class="info">
+            <h3>{{row["name"]}}</h3>
+           <h3>numéro de téléphone {{row["tel"]}}</h3>
+           <h3>{{row["address"]}}</h3>
+        </div>
+       </section>
+       <footer>
+        <h1>pharmanetwork</h1>
+        <div class="tous">
+            <ul>
+                <li><a href="http://127.0.0.1:5000/contact">home</a></li>
+                <li><a href="">about us</a></li>
+                <li><a href="http://127.0.0.1:5000/#service">our services</a></li>
+                <li><a href="http://127.0.0.1:5000/contact">contact</a></li>
+            </ul>
+            <ul>
+                <li> <a href="http://127.0.0.1:5000//info"> Resouces</a></li>
+                <li> <a href="">Terms Of Service</a></li>
+                <li> <a href="">Privacy Policy</a> </li>
+            </ul>
+        </div>
+        <p>© 2022 pharmanetwork</p>
+    </footer>
+       <script src="{{url_for('static',filename='js/infofarma.js')}}"></script>
+</body>
+</html>

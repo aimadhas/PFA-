@@ -1,0 +1,106 @@
+{%extends "base.html"%}
+
+{% block title %}contact{% endblock %}
+
+
+
+
+
+
+
+{%block body%}
+    
+<header>
+    <div class="Alllogo">
+        <img src="{{url_for('static',filename='image/logo_test_1.png')}}" alt="">
+        <h1 class="logo2">Pharma network</h1>
+    </div>
+    <ul class="nav-link" id="one">
+        <li id="tow"><a href="http://127.0.0.1:5000/"">Home</a></li>
+        <li id="ol"><a href="http://127.0.0.1:5000/#service">Our Service</a></li>
+        <li id="lo"><a href="http://127.0.0.1:5000/contact">Contact</a></li>
+    </ul>
+    <div class="burger" id="two">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+ </header>
+ <!-- ############### -->
+ <!-- section one -->
+ <section class="contact">
+      <div class="info">
+              <h1 class="one1">Contact Info</h1>
+              <div class="line"></div>
+          <div class="info1">
+              <h2>Name</h2>
+              <p>pharma network</p>
+          </div>
+          <div class="info1">
+              <h2>Email</h2>
+              <p>Phaemanetwork@gmail.com</p>
+          </div>
+          <div class="info1">
+              <h2>Phone</h2>
+              <p>+19159769739</p>
+          </div>
+      </div>
+      <form action="" id="form" onsubmit=" return validate()">
+              <h1 class="one1">Contact Us</h1>
+              <div class="line"></div>
+          <div class="inp-form">
+              <label for="">Full Name</label>
+              <input type="text" id="Nom" name="name">
+              <span class="exlama" id="exlama"><i class="fa-solid fa-circle-exclamation"></i></span>
+              <span class="check" id="check"><i class="fa-solid fa-circle-check"></i></span>
+              <p class="erore" id="erore">Please entrer votre nom</p>
+          </div>
+          <div class="inp-form">
+              <label for="">Email</label>
+              <input type="email" id="email" name="email">
+              <span class="exlama" id="eexlama"><i class="fa-solid fa-circle-exclamation"></i></span>
+              <span class="check" id="echeck"><i class="fa-solid fa-circle-check"></i></span>
+              <p class="erore" id="eerore">Please Enter Valid Email Address</p>
+          </div>
+          <div class="inp-form">
+              <label for="">phone</label>
+              <input type="tel" id="name" name="tel">
+              <span class="exlama" id="texlama"><i class="fa-solid fa-circle-exclamation"></i></span>
+              <span class="check" id="tcheck"><i class="fa-solid fa-circle-check"></i></span>
+              <p class="erore" id="terore">Please Enter votre tel</p>
+          </div>
+          <div class="inp-form">
+              <label for="">Message</label>
+              <input type="text" id="adrs" name="day">
+              <span class="exlama" id="aexlama"><i class="fa-solid fa-circle-exclamation"></i></span>
+              <span class="check" id="acheck"><i class="fa-solid fa-circle-check"></i></span>
+              <p class="erore" id="aerore">Please Enter un Message</p>
+          </div>
+          <input type="submit" value="send"  class="btn1" id="btn">
+      </form>
+  </section>
+
+  <footer>
+    <h1>pharmanetwork</h1>
+    <div class="tous">
+        <ul>
+            <li><a href="http://127.0.0.1:5000/">home</a></li>
+            <li><a href="">about us</a></li>
+            <li><a href="http://127.0.0.1:5000/#service">our services</a></li>
+            <li><a href="http://127.0.0.1:5000/contact">contact</a></li>
+        </ul>
+        <ul>
+            <li> <a href="http://127.0.0.1:5000//info"> Resouces</a></li>
+            <li> <a href="">Terms Of Service</a></li>
+            <li> <a href="">Privacy Policy</a> </li>
+        </ul>
+    </div>
+    <p>© 2022 pharmanetwork</p>
+</footer>
+
+
+ <!-- fin section one -->
+ <script src="{{url_for('static',filename='js/contact.js')}}"></script>
+
+
+{%endblock%}

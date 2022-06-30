@@ -1,0 +1,167 @@
+{%extends "base.html"%}
+
+{% block title %}iscription{% endblock %}
+
+
+{%block body%}
+
+
+<header>
+
+    <div class="Alllogo">
+        <img src="{{url_for('static',filename='image/logo_test_1.png')}}" alt="">
+        <h1 class="logo2">Pharma network</h1>
+    </div>
+    <ul class="nav-link" id="one">
+        <li id="tow"><a href="http://127.0.0.1:5000/">Home</a></li>
+        <li id="ol"><a href="http://127.0.0.1:5000/#service">Our Service</a></li>
+        <li id="lo"><a href="http://127.0.0.1:5000/contact">Contact</a></li>
+    </ul>
+    <div class="burger" id="two">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+</header>
+
+    {%with messages = get_flashed_messages(with_categories=True)%}
+
+        {%if messages%}
+                {%for category , massage in messaes %}
+
+                    {%if category == 'error' %}  
+                        <div class="erur" role="alert">
+
+                            {{message}}
+
+                            <button type="button" class="close" data-dismiss="alert">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+
+
+                        </div >
+
+                    {%else%}
+
+                        <div class="alert alert-success alter-dismissale fade show" role="alert">
+
+                            {{message}}
+
+                            <button type="button" class="close" data-dismiss="alert">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+
+
+                        </div >
+                    {%endif%}
+
+                {%endfor%}
+
+        
+        {%endif%}
+
+    {%endwith%}
+
+
+
+<section>
+
+        <div class="contenaire container-fluid">
+            <div class="image" id="image">
+                <img src="{{url_for('static',filename='image/756.jpg')}}" alt="">
+                <h1> <a href="">pharmacie</a></h1>
+            </div>
+
+            
+            <form action="/savedetails" method="POST" name ='registre-fom' id="form" onsubmit=" return validate()">
+                <h1>Veuillez Inscrire Votre Pharmacie</h1>
+
+                <div class="inp-form">
+                    <label for="name">Nom de pharmacie</label>
+                    <input type="text" id="Nom" name="name">
+                    <span class="exlama" id="exlama"><i class="fa-solid fa-circle-exclamation"></i></span>
+                    <span class="check" id="check"><i class="fa-solid fa-circle-check"></i></span>
+                    <p class="erore" id="erore">Ce nom est dèja existe</p>
+                </div>
+
+                <div class="inp-form">
+                    <label for="">Email</label>
+                    <input type="email"  id="email" name="email">
+                    <span class="exlama" id="eexlama"><i class="fa-solid fa-circle-exclamation"></i></span>
+                    <span class="check" id="echeck"><i class="fa-solid fa-circle-check"></i></span>
+                    <p class="erore" id="eerore">Please Enter Valid Email Address</p>
+                </div>
+                <div class="inp-form">
+                    <label for="">Tél</label>
+                    <input type="tel" id="tel" name="tel">
+                    <span class="exlama" id="texlama"><i class="fa-solid fa-circle-exclamation"></i></span>
+                    <span class="check" id="tcheck"><i class="fa-solid fa-circle-check"></i></span>
+                    <p class="erore" id="terore">Please Enter votre tel</p>
+                   
+                </div>
+                <div class="inp-form">
+                    <label for="">Enter votre journèe de permanence</label>
+                    <input type="date" id="day" name="date">
+                    <span class="exlama" id="tyexlama"><i class="fa-solid fa-circle-exclamation"></i></span>
+                    <span class="check" id="tycheck"><i class="fa-solid fa-circle-check"></i></span>
+                    <p class="erore" id="tyerore">Please Enter (jour/nuit)</p>
+                </div>
+                <div class="inp-form">
+                    <label for="">adresse</label>
+                    <input type="text" id="adrs" name="address">
+                    <span class="exlama" id="aexlama"><i class="fa-solid fa-circle-exclamation"></i></span>
+                    <span class="check" id="acheck"><i class="fa-solid fa-circle-check"></i></span>
+                    <p class="erore" id="aerore">Please Enter adresse</p>
+                </div>
+                <input type="submit" value="submite"  class="btn1" id="btn">
+            </form>
+           
+
+
+
+            <div class="congo" id="congo">
+                <i class="fa-solid fa-check"></i>
+                <h1>congratulations</h1>
+                <p>your account has been created .</p>
+            </div>
+        </div>
+
+
+</section>
+
+
+
+<footer>
+    <h1>pharmanetwork</h1>
+    <div class="tous">
+        <ul>
+            <li><a href="http://127.0.0.1:5000/contact">home</a></li>
+            <li><a href="">about us</a></li>
+            <li><a href="http://127.0.0.1:5000/#service">our services</a></li>
+            <li><a href="http://127.0.0.1:5000/contact">contact</a></li>
+        </ul>
+        <ul>
+            <li> <a href=""> Resouces</a></li>
+            <li> <a href="">Terms Of Service</a></li>
+            <li> <a href="">Privacy Policy</a> </li>
+        </ul>
+    </div>
+    <p>© 2022 pharmanetwork</p>
+</footer>
+
+
+
+
+
+<script src="{{url_for('static',filename='js/validphrma.js')}}"></script>
+
+
+
+{%endblock%}
+
+
+
+
+
+<!-- we have (body) and (content)  in body we don't have the margin but in content we have margin-->
